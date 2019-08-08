@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/images
 
 # testing
 /coverage
@@ -11,7 +12,6 @@
 # production
 /build
 
-/src/images
 
 # misc
 .DS_Store

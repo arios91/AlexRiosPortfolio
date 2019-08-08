@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import {Logo} from '../../images/Logo.png';
-import './Navbar.css';
 
 class Navbar extends Component {
     render() {
@@ -9,7 +7,7 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
                 <div className="container myClass">
                     <Link to="/" className="navbar-brand">
-                        Alex
+                    <img src="https://i.imgur.com/C826S7G.png" alt="logo" height="65"/>
                     </Link>
                     <button className="navbar-toggler"
                         type="button"
