@@ -4,7 +4,7 @@ class Skills extends Component {
     render() {
         return (
             <div className="text-center">
-                <h1>My Skills</h1>
+                <h2>My Skills</h2>
                 <div className="row">
 
                     <div className="col-sm">
@@ -34,7 +34,7 @@ class Skills extends Component {
                         <img src="https://i.imgur.com/7XaOtOX.png" alt="Node.js" width="75"/><br/>
                         <span>MongoDB</span><br/>
                     </div>
-                    
+
                 </div>
             </div>
         )
