@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <nav className="navbar navbar-expand-md navbar-dark 
+            mb-4">
                 <div className="container myClass">
                     <Link to="/" className="navbar-brand">
                     <img src="https://i.imgur.com/C826S7G.png" alt="logo" height="65"/>
@@ -18,7 +19,10 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarMain">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Main</Link>
+                                <Link to="/" className="nav-link">My Work</Link>
+                            </li>
+                            <li>
+                                <Link className="nav-link">Take A Resume</Link>
                             </li>
                         </ul>
                     </div>

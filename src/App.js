@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App bg-dark">
         <Navbar/>
         <div className="container">
           <Switch>

@@ -1,0 +1,28 @@
+.full{
+    width: 100%;
+}
+
+.threeQuarter{
+    width: 75%;
+}
+
+.twoQuarter{
+    width: 50%;
+}
+
+.oneQuarter{
+    width: 25%;
+}
+
+.twoThirds{
+    width: 66%;
+}
+
+.oneThird{
+    width: 33%;
+}
+
+hr{
+    border-color: white !important;
+    background-color: white;
+}
