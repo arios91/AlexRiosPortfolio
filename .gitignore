@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /src/images
+/src/resume
 
 # testing
 /coverage
