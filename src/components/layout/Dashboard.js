@@ -6,7 +6,7 @@ import Projects from './Projects';
 class Dashboard extends Component {
     render() {
         return (
-            <div className="text-white">
+            <div id="dash" className="text-white">
                 <Intro/>
                 <hr/>
                 <Projects/>
