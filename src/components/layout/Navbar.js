@@ -22,7 +22,7 @@ class Navbar extends Component {
                     <div id="navbarMain" className="collapse navbar-collapse">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item ml-auto">
-                                <Link to="/" className="nav-link">Get in touch</Link>
+                                <a href="mailto:alx.rios91@gmail.com" className="nav-link">Get In Touch</a>
                             </li>
                             <li className="nav-item ml-auto">
                                 <a href={pdf}  className="bold nav-link" target="_blank">Take a Resume</a>

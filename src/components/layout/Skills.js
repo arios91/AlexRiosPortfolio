@@ -4,8 +4,9 @@ class Skills extends Component {
     render() {
         return (
             <div id="skillsSection" className="text-center">
-                <h2>My Skills</h2>
-                <hr/>
+                <div className="border-bottom">
+                    <h2>Skills</h2>
+                </div>
                 <div className="row">
                     <div className="col">
                         <img src="https://i.imgur.com/Z7lHhvd.png" alt="Java" width="75" height="75"/><br/>
