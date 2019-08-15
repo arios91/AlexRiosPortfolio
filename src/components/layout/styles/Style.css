@@ -15,3 +15,9 @@
 .job-title-date{
     font-size: 1.05rem;
 }
+
+.project-title{
+    font-size: 1.65rem;
+    text-decoration: underline;
+    color: white;
+}
