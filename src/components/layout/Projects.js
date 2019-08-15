@@ -19,7 +19,7 @@ class Projects extends Component {
                             </a>
                             <p className="project-description">
                                 Fully functional e-commerce site custom built for a local flower shop<br/>
-                                which provides same day fresh flower deliver for South Texas.<br/>
+                                which provides same day fresh flower delivery for South Texas.<br/>
                                 Built with Angular on a Node.js backend;
                             </p>
                             <div className="w-100">
