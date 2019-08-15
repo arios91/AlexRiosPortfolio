@@ -1,3 +1,13 @@
 .testDelay{
     transition-delay: 200ms;
 }
+
+.job-title{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 10px 0px;
+}
+
+.job-title-date{
+    font-size: 1.05rem;
+}
