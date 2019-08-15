@@ -30,6 +30,21 @@ class Projects extends Component {
 
                             </div>
                         </div>
+                        <div className="col-6 text-cent">
+                            <a href="https://ar-webdesigns-restaurant.herokuapp.com/" target="_blank" className="project-title">Restaurant Template</a>
+                            <p>
+                                Template for a restaurant website with customizable components
+                            </p>
+                            <div className="w-100">
+                                <p className="project-stack">
+                                    Tech Stack:<br/>
+                                    <p>React</p> 
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-6 p-0 text-left">
+                            <img src="https://i.imgur.com/0x9rQuB.png" alt="test" width="100%"/>
+                        </div>
                     </div>
                 </div>
             </div>
