@@ -68,9 +68,6 @@ class Experience extends Component {
         this.setState({currentJob: job})
     }
 
-
-
-    
     render() {
         return (
             <div id="workSection" className="text-center">
@@ -82,10 +79,10 @@ class Experience extends Component {
                         <div className="col-4 text-left">
                             <ul className="list-group">
                                 <li className="list-group-item text-bold bg-dark border-0 m-2">
-                                    <span id="conduent" onClick={this.companyClick}>Conduent</span>
+                                    <span id="conduent" className="company-name" onClick={this.companyClick}>Conduent</span>
                                 </li>
                                 <li className="list-group-item bg-dark border-0 m-2">
-                                    <span id="hamer" onClick={this.companyClick}>Hamer Enterprises</span>
+                                    <span id="hamer" className="company-name" onClick={this.companyClick}>Hamer Enterprises</span>
                                 </li>
                             </ul>
                         </div>
