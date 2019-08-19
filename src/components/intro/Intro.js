@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar';
-import './styles/Style.css';
 
 class Intro extends Component {
     render() {
         return (
             <div id="intro">
-                <div className="testDelay">
+                <div>
                     <h1>Hey There!</h1>
                 </div>
-                    <span>My name is Alejandro Rios, but you can call me Alex.</span>
+                <span>My name is Alejandro Rios, but you can call me Alex.</span>
                 <br/><br/>
                 <span>I'm a Software Engineer based in Austin, Texas with three years of professional experience in designing, developing, testing, and maintaining Java enterprise applications.</span>
                 <br/><br/>

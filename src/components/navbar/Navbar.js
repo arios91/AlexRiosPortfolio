@@ -25,7 +25,7 @@ class Navbar extends Component {
                                 <a href="mailto:alx.rios91@gmail.com" className="nav-link">Get In Touch</a>
                             </li>
                             <li className="nav-item ml-auto">
-                                <a href={pdf}  className="bold nav-link" target="_blank">Take a Resume</a>
+                                <a href={pdf}  className="bold nav-link" target="_blank" rel="noopener noreferrer">Take a Resume</a>
                             </li>
                         </ul>
                     </div>

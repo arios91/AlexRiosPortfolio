@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Intro from './Intro';
-import Skills from './Skills';
-import Projects from './Projects';
-import Experience from './Experience';
+import Intro from '../intro/Intro';
+import Skills from '../skills/Skills';
+import Projects from '../projects/Projects';
+import Experience from '../experience/Experience';
 
 class Dashboard extends Component {
     render() {

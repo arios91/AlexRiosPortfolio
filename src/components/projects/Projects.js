@@ -25,7 +25,7 @@ class Projects extends Component {
                             <div className="w-100">
                                 <p className="project-stack">
                                     Tech Stack:<br/>
-                                    <p>Angular, Node.js</p> 
+                                    Angular, Node.js 
                                 </p>
 
                             </div>
@@ -38,7 +38,7 @@ class Projects extends Component {
                             <div className="w-100">
                                 <p className="project-stack">
                                     Tech Stack:<br/>
-                                    <p>React</p> 
+                                    React
                                 </p>
                             </div>
                         </div>
