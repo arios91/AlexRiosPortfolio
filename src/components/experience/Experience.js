@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import {Spring} from 'react-spring/renderprops';
+import {Spring, Trail, animated} from 'react-spring/renderprops';
 import './Experience.css';
 
 class Experience extends Component {
 
     state = {
         currentJob : 'conduent',
+        conduentListOne: [
+            'Responsible for migrating legacy project from Struts to React.',
+            'Design and create Java REST API to be used alongside new React system.',
+            'Support and resolve any issues in legacy Struts project.'
+        ],
+        conduentListTwo: ['Java', 'Struts', 'React', 'SQL'],
+        hamerListOne : [
+            'Designed and devloped administrator permissions system.',
+            'Ensure Java projects are ADA compliant.',
+            'Create and maintain required SQL database tables for web applications.'
+        ],
+        hamerListTwo: ['Java', 'JSF', 'PrimeFaces', 'SQL']
     };
 
     isConduentSelected = () =>{
@@ -13,60 +25,56 @@ class Experience extends Component {
         return currentJob === 'conduent';
     }
 
+    toggle = () => this.setState(state => ({ toggle: !state.toggle }))
+
     getDetails = () => {
+        let {conduentListOne, conduentListTwo, hamerListOne, hamerListTwo} = this.state;
         let conduent = this.isConduentSelected();
-        console.log('getting details');
+        let listOne = conduent ? conduentListOne : hamerListOne;
+        let listTwo = conduent ? conduentListTwo : hamerListTwo;
         return(
             <Spring
-                from={{ opacity: 0}}
-                to={{ opacity: 1}}
-                config={{duration: 1000}}
+                reset
+                from={{opacity: 0}}
+                to={{opacity: 1}}
+                config={{duration: 800}}
             >
-                {props => 
+                {props => (
                     <div className="text-left" style={props}>
                         <span id="jobTitle" className='job-title'>{conduent ? 'Software Engineer' : 'Application Developer'}</span><br/>
-                        <span className="job-title-date">{conduent ? 'March 2019 - Current' : 'May 2016 - March 2019'}</span><br/>
-                        <ul className="list-group">
-                            {conduent ?
-                                <div className="job-details">
-                                    <ul>
-                                        <li>Responsible for migrating legacy project from Struts to React.</li>
-                                        <li>Design and create Java REST API to be used alongside new React system.</li>
-                                        <li>Support and resolve any issues in legacy Struts project.</li>
-                                    </ul>
-                                    <div>
-                                        <span className="tech-stack">Primary Technologies</span>
-                                        <ul>
-                                            <li>Java</li>
-                                            <li>Struts</li>
-                                            <li>React</li>
-                                            <li>SQL</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                :
-                                <div className="job-details">
-                                    <ul>
-                                        <li>Designed and devloped administrator permissions system.</li>
-                                        <li>Ensure Java projects are ADA compliant.</li>
-                                        <li>Create and maintain required SQL database tables for web applications.</li>
-                                    </ul>
-                                    <div>
-                                        <span className="tech-stack">Primary Technologies</span>
-                                        <ul>
-                                            <li>Java</li>
-                                            <li>JSF</li>
-                                            <li>PrimeFaces</li>
-                                            <li>SQL</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            }
-                        </ul>
-                    </div>
-                
-                }
+                        <span style={props} className="job-title-date">{conduent ? 'March 2019 - Current' : 'May 2016 - March 2019'}<br/></span>
+                        <div className="job-details">
+                            <ul>
+                                <Trail
+                                    reset
+                                    items={listOne}
+                                    from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
+                                    to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
+                                    config={{duration: 800}}>
+                                    {item => props => (
+                                        <li style={props}>{item}</li>
+                                        )}
+                                </Trail>
 
+                            </ul>
+                            <div>
+                                <span style={props} className="tech-stack">Primary Technologies</span>
+                                <ul>
+                                    <Trail
+                                        reset
+                                        items={listTwo}
+                                        from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
+                                        to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
+                                        config={{duration: 800}}>
+                                        {item => props => (
+                                            <li style={props}>{item}</li>
+                                        )}
+                                    </Trail>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </Spring>
         )
     }
@@ -84,28 +92,36 @@ class Experience extends Component {
 
     render() {
         return (
-            <div id="workSection" className="text-center">
-                <div className="border-bottom">
-                    <h2>Experience</h2>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-4 text-left">
-                            <ul className="list-group">
-                                <li className="list-group-item text-bold bg-dark border-0 m-2">
-                                    <span id="conduent" className="company-name" onClick={this.companyClick}>Conduent</span>
-                                </li>
-                                <li className="list-group-item bg-dark border-0 m-2">
-                                    <span id="hamer" className="company-name" onClick={this.companyClick}>Hamer Enterprises</span>
-                                </li>
-                            </ul>
+            <Spring
+                    from={{ opacity: 0}}
+                    to={{ opacity: 1}}
+                    config={{delay: 2000, duration: 750}}
+                >
+                    {props => (
+                        <div id="workSection" style={props} className="text-center">
+                            <div className="border-bottom">
+                                <h2>Experience</h2>
+                            </div>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-4 text-left">
+                                        <ul className="list-group">
+                                            <li className="list-group-item text-bold bg-dark border-0 m-2">
+                                                <span id="conduent" className="company-name" onClick={this.companyClick}>Conduent</span>
+                                            </li>
+                                            <li className="list-group-item bg-dark border-0 m-2">
+                                                <span id="hamer" className="company-name" onClick={this.companyClick}>Hamer Enterprises</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="col-8">
+                                        {this.getDetails()}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-8">
-                            {this.getDetails()}
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    )}
+                </Spring>
         )
     }
 }
