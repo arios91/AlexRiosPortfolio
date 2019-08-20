@@ -1,0 +1,11 @@
+.project-title{
+    font-size: 1.65rem;
+    text-decoration: underline;
+    color: white;
+}
+
+@media (max-width: 576px){
+    .project-title{
+        font-size: 1.35rem;
+    }
+}
