@@ -29,12 +29,12 @@ class Projects extends Component {
                                             {props => (
                                                 <div style={props} className="col-12 row">
                                                     <div className="col-12 col-lg-6">
-                                                        <a href="https://www.petalosarte.com" target="_blank" className="project-title">
-                                                            <img src="https://i.imgur.com/yAL7idq.png" alt="flower shop site image" width="100%"/>
+                                                        <a href="https://www.petalosarte.com" target="_blank" rel="noopener noreferrer" className="project-title">
+                                                            <img src="https://i.imgur.com/yAL7idq.png" alt="flower shop site" width="100%"/>
                                                         </a>
                                                     </div>
                                                     <div className="col-12 col-lg-6 order-sm-first text-center">
-                                                        <a href="https://www.petalosarte.com" target="_blank" className="project-title">
+                                                        <a href="https://www.petalosarte.com" target="_blank" rel="noopener noreferrer" className="project-title">
                                                             Petalos y Arte Flower Shop
                                                         </a>
                                                         <p className="project-description">
@@ -52,12 +52,12 @@ class Projects extends Component {
                                             {props => (
                                                 <div style={props} className="col-12 row">
                                                     <div className="col-12 col-lg-6">
-                                                        <a href="https://ar-webdesigns-restaurant.herokuapp.com/" target="_blank" className="project-title">
-                                                            <img src="https://i.imgur.com/0x9rQuB.png" alt="restaurant template image" width="100%"/>
+                                                        <a href="https://ar-webdesigns-restaurant.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="project-title">
+                                                            <img src="https://i.imgur.com/0x9rQuB.png" alt="restaurant template" width="100%"/>
                                                         </a>
                                                     </div>
                                                     <div className="col-12 col-lg-6 text-center">
-                                                        <a href="https://ar-webdesigns-restaurant.herokuapp.com/" target="_blank" className="project-title">
+                                                        <a href="https://ar-webdesigns-restaurant.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="project-title">
                                                             Restaurant Template
                                                         </a>
                                                         <p>

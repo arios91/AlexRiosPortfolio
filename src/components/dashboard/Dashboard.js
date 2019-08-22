@@ -6,8 +6,6 @@ import Experience from '../experience/Experience';
 import Navbar from '../navbar/Navbar';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 
-const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
-
 class Dashboard extends Component {
     state = {
         setNavbarOpaque: false
