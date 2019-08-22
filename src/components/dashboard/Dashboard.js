@@ -9,27 +9,35 @@ import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 
 class Dashboard extends Component {
+    state = {
+        setNavbarOpaque: false
+    }
+
+    changeNavClass = (inIntro) => {
+        this.setState({setNavbarOpaque: !inIntro});
+    }
+
     render() {
         return (
             <div id="dash" className="text-white">
-                <Parallax ref={ref => (this.parallax = ref)} pages={3}>
-
-                    <ParallaxLayer offset={0} speed={0.5}>
-                        <Intro/>
+                <Parallax ref={ref => (this.parallax = ref)} pages={4}>
+                    <ParallaxLayer offset={0} speed={0}>
+                        <Intro callBackFromParent={this.changeNavClass}/>
                     </ParallaxLayer>
-                    <ParallaxLayer offset={0} speed={-1}>
+
+                    <ParallaxLayer offset={0} factor={0.10} speed={-1} className={`${this.state.setNavbarOpaque ? "setOpaque" : ""}`}>
                         <Navbar/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={1} factor={1} speed={0.5}>
+                    <ParallaxLayer offset={1} factor={1.1} speed={0.2}>
                         <Projects/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={2} factor={1} speed={0.5}>
+                    <ParallaxLayer offset={2} factor={1.1} speed={0.2}>
                         <Experience/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={3} factor={0.5} speed={0.5}>
+                    <ParallaxLayer offset={3} factor={1} speed={0}>
                         <Skills/>
                     </ParallaxLayer>
                 </Parallax>

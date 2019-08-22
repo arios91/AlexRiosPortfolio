@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Spring, Trail} from 'react-spring/renderprops';
+import VisibilitySensor from "react-visibility-sensor";
 import './Experience.css';
 
 class Experience extends Component {
@@ -33,49 +34,40 @@ class Experience extends Component {
         let listOne = conduent ? conduentListOne : hamerListOne;
         let listTwo = conduent ? conduentListTwo : hamerListTwo;
         return(
-            <Spring
-                reset
-                from={{opacity: 0}}
-                to={{opacity: 1}}
-                config={{duration: 800}}
-            >
-                {props => (
-                    <div className="text-left" style={props}>
-                        <span id="jobTitle" className='job-title'>{conduent ? 'Software Engineer' : 'Application Developer'}</span><br/>
-                        <span style={props} className="job-title-date">{conduent ? 'March 2019 - Current' : 'May 2016 - March 2019'}<br/></span>
-                        <div className="job-details">
-                            <ul>
-                                <Trail
-                                    reset
-                                    items={listOne}
-                                    from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
-                                    to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
-                                    config={{duration: 800}}>
-                                    {item => props => (
-                                        <li style={props}>{item}</li>
-                                        )}
-                                </Trail>
+            <div className="text-left">
+                <span id="jobTitle" className='job-title'>{conduent ? 'Software Engineer' : 'Application Developer'}</span><br/>
+                <span className="job-title-date">{conduent ? 'March 2019 - Current' : 'May 2016 - March 2019'}<br/></span>
+                <div className="job-details">
+                    <ul>
+                        <Trail
+                            reset
+                            items={listOne}
+                            from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
+                            to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
+                            config={{duration: 800}}>
+                            {item => props => (
+                                <li style={props}>{item}</li>
+                                )}
+                        </Trail>
 
-                            </ul>
-                            <div>
-                                <span style={props} className="tech-stack">Primary Technologies</span>
-                                <ul>
-                                    <Trail
-                                        reset
-                                        items={listTwo}
-                                        from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
-                                        to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
-                                        config={{duration: 800}}>
-                                        {item => props => (
-                                            <li style={props}>{item}</li>
-                                        )}
-                                    </Trail>
-                                </ul>
-                            </div>
-                        </div>
+                    </ul>
+                    <div>
+                        <span className="tech-stack">Primary Technologies</span>
+                        <ul>
+                            <Trail
+                                reset
+                                items={listTwo}
+                                from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
+                                to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
+                                config={{duration: 800}}>
+                                {item => props => (
+                                    <li style={props}>{item}</li>
+                                )}
+                            </Trail>
+                        </ul>
                     </div>
-                )}
-            </Spring>
+                </div>
+            </div>
         )
     }
 
@@ -92,17 +84,17 @@ class Experience extends Component {
 
     render() {
         return (
-            <Spring
-                    from={{ opacity: 0}}
-                    to={{ opacity: 1}}
-                    config={{delay: 0, duration: 750}}
-                >
-                    {props => (
-                        <div id="workSection" style={props} className="vertical-align row">
-                            <div className="col-12 col-lg-3 text-center"></div>
+            <div id="workSection" className="vertical-align row">
+                <div className="col-12 col-lg-3 text-center"></div>
+                <VisibilitySensor partialVisibility>
+                    {({ isVisible }) => (
+                        <div className="col-12 col-lg-6 row text-center">
+                            <Spring
+                                to={{ opacity: isVisible ? 1 : 0}}
+                                config={{duration: 1000}}>
 
-                            <div className="col-12 col-lg-6 row text-center">
-                                <div className="col-12 row">
+                                {props => (
+                                <div style={props} className="col-12 row">
                                     <div className="col-12 border-bottom section-head-7">
                                         <h2>Experience</h2>
                                     </div>
@@ -124,12 +116,13 @@ class Experience extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="col-12 col-lg-3 text-center"></div>
+                                )}
+                            </Spring>
                         </div>
                     )}
-                </Spring>
+                </VisibilitySensor>
+                <div className="col-12 col-lg-3 text-center"></div>
+            </div>
         )
     }
 }

@@ -5,15 +5,14 @@ import {Spring} from 'react-spring/renderprops';
 import './Navbar.css';
 
 class Navbar extends Component {
-
     render() {
         return (
             <Spring
                 from={{ opacity: 0}}
                 to={{ opacity: 1}}
-                config={{delay: 2000, duration: 750}}
-            >
+                config={{delay: 2000, duration: 750}}>
                 {props => (
+                    // <nav style={props} className="navbar navbar-expand-md navbar-dark">
                     <nav style={props} className="navbar navbar-expand-md navbar-dark">
                         <div className="container">
                             <Link to="/" className="navbar-brand">
