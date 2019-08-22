@@ -8,16 +8,19 @@ import Experience from './components/experience/Experience';
 import Skills from './components/skills/Skills';
 import './App.css';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
+import HttpsRedirect from 'react-https-redirect';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-          </Switch>
-      </div>
-    </Router>
+    <HttpsRedirect>
+      <Router>
+        <div className="App">
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+            </Switch>
+        </div>
+      </Router>
+    </HttpsRedirect>
   );
 }
 
