@@ -1,0 +1,17 @@
+.main-title{
+    font-size: 5rem;
+}
+
+.intro-text{
+    font-size: 1.05rem;
+}
+
+@media (max-width: 576px){
+    .main-title{
+        font-size: 3rem;
+    }
+
+    .intro-text{
+    
+    }
+}

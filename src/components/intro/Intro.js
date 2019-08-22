@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {Spring} from 'react-spring/renderprops';
+import VisibilitySensor from "react-visibility-sensor";
+import './Intro.css';
 
 class Intro extends Component {
     state = {
@@ -10,34 +12,43 @@ class Intro extends Component {
 
     render() {
         return (
-            <div id="intro">
-                <Spring
-                    from={{ opacity: 0, marginTop: -500}}
-                    to={{ opacity: 1, marginTop: 0}}
-                    config={{duration: 1000}}
-                >
-                    {props => (
-                        <div style={props}>
-                        <h1>Hey There!</h1>
-                    </div>
-                    )}
-                </Spring>
-                <Spring
-                    from={{ opacity: 0}}
-                    to={{ opacity: 1}}
-                    config={{delay: 1000, duration: 750}}
-                >
-                    {props => (
-                        <div style={props}>
-                            <span>My name is Alejandro Rios, but you can call me Alex.</span>
-                            <br/><br/>
-                            <span>I'm a Software Engineer based in Austin, Texas with three years of professional experience in designing, developing, testing, and maintaining Java enterprise applications.</span>
-                            <br/><br/>
-                            <span>I like to spend my my free time playing video games or practicing front end development using Javascript frameworks such are React and Angular along with Node.js and Express.</span>
-                        </div>
-                    )}
-
-                </Spring>
+            <div id="intro" className="vertical-align">
+                <VisibilitySensor>
+                {({ isVisible }) => (
+                            <div className="row w-100">
+                                <div className="col-2 col-lg-3">
+                                </div>
+                                <div className="col-8 col-lg-6 row text-left">
+                                    <Spring
+                                        to={{ opacity: isVisible ? 1 : 0, transform: isVisible ? "translateX(0)" : "translateX(100px)"}}
+                                        config={{delay: 300, duration: 800}}>
+                                        {props => (
+                                            <div style={props} className="col-12">
+                                                <span className="main-title">Hey There!</span>
+                                            </div>
+                                        )}
+                                    </Spring>
+                                    <Spring
+                                        to={{ opacity: isVisible ? 1 : 0, marginTop: isVisible ? 0 : -300}}
+                                        config={{delay: 1200, duration: 1000}}>
+                                        {props => (
+                                            <div style={props} className="col-12">
+                                                <div className="intro-text">
+                                                    <span>My name is Alejandro Rios, but you can call me Alex.</span>
+                                                    <br/><br/>
+                                                    <span>I'm a Software Engineer based in Austin, Texas with three years of professional experience in designing, developing, testing, and maintaining Java enterprise applications.</span>
+                                                    <br/><br/>
+                                                    <span>I like to spend my my free time playing video games or practicing front end development using Javascript frameworks such are React and Angular along with Node.js and Express.</span>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </Spring>
+                                </div>
+                                <div className="col-2 col-lg-3">
+                                </div>
+                            </div>
+                )}
+                </VisibilitySensor>
             </div>
         )
     }

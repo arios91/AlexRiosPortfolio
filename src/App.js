@@ -2,18 +2,20 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import Navbar from './components/navbar/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
+import Intro from './components/intro/Intro';
+import Projects from './components/projects/Projects';
+import Experience from './components/experience/Experience';
+import Skills from './components/skills/Skills';
 import './App.css';
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 
 function App() {
   return (
     <Router>
-      <div className="App bg-dark">
-        <Navbar/>
-        <div className="container">
+      <div className="App">
           <Switch>
             <Route exact path="/" component={Dashboard} />
           </Switch>
-        </div>
       </div>
     </Router>
   );

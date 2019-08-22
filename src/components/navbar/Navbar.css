@@ -1,0 +1,16 @@
+.navbar{
+    background: linear-gradient(#343a40, transparent);
+    border: none;
+    color: white;
+    z-index: 100;
+}
+
+.nav-item{
+    font-size: 1.05rem;
+    transition: all 0.5s;
+}
+
+.nav-item:hover{
+    font-size: 1.2rem;
+    font-weight: bold;
+}

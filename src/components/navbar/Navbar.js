@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import pdf from '../../assets/resume/resume.pdf';
 import {Spring} from 'react-spring/renderprops';
+import './Navbar.css';
 
 class Navbar extends Component {
+
     render() {
         return (
             <Spring
                 from={{ opacity: 0}}
                 to={{ opacity: 1}}
-                config={{delay: 650, duration: 750}}
+                config={{delay: 2000, duration: 750}}
             >
                 {props => (
-                    <nav style={props} className="navbar navbar-expand-md navbar-dark mb-4">
-                        <div className="container myClass">
+                    <nav style={props} className="navbar navbar-expand-md navbar-dark">
+                        <div className="container">
                             <Link to="/" className="navbar-brand">
                                 <img src="https://i.imgur.com/C826S7G.png" alt="logo" height="65"/>
                             </Link>

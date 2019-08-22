@@ -1,0 +1,10 @@
+.skill-image{
+    height: 75px;
+    width: 75px;
+    transition: all .75s;
+}
+
+.skill-image:hover{
+    height: 95px;
+    width: 95px;
+}

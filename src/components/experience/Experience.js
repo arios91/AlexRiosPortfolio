@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Spring, Trail, animated} from 'react-spring/renderprops';
+import {Spring, Trail} from 'react-spring/renderprops';
 import './Experience.css';
 
 class Experience extends Component {
@@ -95,30 +95,38 @@ class Experience extends Component {
             <Spring
                     from={{ opacity: 0}}
                     to={{ opacity: 1}}
-                    config={{delay: 2000, duration: 750}}
+                    config={{delay: 0, duration: 750}}
                 >
                     {props => (
-                        <div id="workSection" style={props} className="text-center">
-                            <div className="border-bottom">
-                                <h2>Experience</h2>
-                            </div>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-4 text-left">
-                                        <ul className="list-group">
-                                            <li className="list-group-item text-bold bg-dark border-0 m-2">
-                                                <span id="conduent" className="company-name" onClick={this.companyClick}>Conduent</span>
-                                            </li>
-                                            <li className="list-group-item bg-dark border-0 m-2">
-                                                <span id="hamer" className="company-name" onClick={this.companyClick}>Hamer Enterprises</span>
-                                            </li>
-                                        </ul>
+                        <div id="workSection" style={props} className="vertical-align row">
+                            <div className="col-12 col-lg-3 text-center"></div>
+
+                            <div className="col-12 col-lg-6 row text-center">
+                                <div className="col-12 row">
+                                    <div className="col-12 border-bottom section-head-7">
+                                        <h2>Experience</h2>
                                     </div>
-                                    <div className="col-8">
-                                        {this.getDetails()}
+
+                                    <div className="col-12 row">
+                                        <div className="col-5 col-lg-4">
+                                            <ul className="list-group">
+                                                <li className="list-group-item text-bold bg-dark border-0 m-2">
+                                                    <span id="conduent" className="company-name" onClick={this.companyClick}>Conduent</span>
+                                                </li>
+                                                <li className="list-group-item bg-dark border-0 m-2">
+                                                    <span id="hamer" className="company-name" onClick={this.companyClick}>Hamer Enterprises</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div className="col-7 col-lg-8 text-center">
+                                            {this.getDetails()}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="col-12 col-lg-3 text-center"></div>
                         </div>
                     )}
                 </Spring>
