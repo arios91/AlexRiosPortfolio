@@ -37,7 +37,7 @@ class Dashboard extends Component {
                         <Navbar/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={1} factor={1} speed={0.15}>
+                    <ParallaxLayer offset={1} factor={1.1} speed={0.15}>
                         <Projects/>
                     </ParallaxLayer>
 
