@@ -20,7 +20,6 @@ class Dashboard extends Component {
         return (
             <div id="dash" className="text-white">
                 <Parallax ref={ref => (this.parallax = ref)} pages={4}>
-
                     <ParallaxLayer offset={0} speed={0}>
                         <Collinear 
                             style={{height: "100%"}}
@@ -31,7 +30,6 @@ class Dashboard extends Component {
                     <ParallaxLayer offset={0} speed={0}>
                         <Intro callBackFromParent={this.changeNavClass}/>
                     </ParallaxLayer>
-
 
                     <ParallaxLayer offset={0} factor={0.10} speed={-1} className={`${this.state.setNavbarOpaque ? "setOpaque" : ""}`}>
                         <Navbar/>
