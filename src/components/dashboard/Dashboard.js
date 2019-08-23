@@ -5,6 +5,7 @@ import Projects from '../projects/Projects';
 import Experience from '../experience/Experience';
 import Navbar from '../navbar/Navbar';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
+import Collinear from '../pts/Collinear';
 
 class Dashboard extends Component {
     state = {
@@ -17,17 +18,25 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div id="dash" className="text-white">
+            <div id="dash" className="text-white bg-dark">
                 <Parallax ref={ref => (this.parallax = ref)} pages={4}>
+                    <ParallaxLayer offset={0} speed={0}>
+                        <Collinear 
+                            style={{height: "100%"}}
+                            background="#112232"
+                            name="pts_anim">
+                        </Collinear>
+                    </ParallaxLayer>
                     <ParallaxLayer offset={0} speed={0}>
                         <Intro callBackFromParent={this.changeNavClass}/>
                     </ParallaxLayer>
+
 
                     <ParallaxLayer offset={0} factor={0.10} speed={-1} className={`${this.state.setNavbarOpaque ? "setOpaque" : ""}`}>
                         <Navbar/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={1} factor={1.1} speed={0.2}>
+                    <ParallaxLayer offset={1} factor={1} speed={0.2}>
                         <Projects/>
                     </ParallaxLayer>
 

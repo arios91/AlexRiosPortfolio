@@ -26,6 +26,7 @@
 
 
 .setOpaque{
+    background: linear-gradient(#262b2f, transparent);
     z-index: 100;
 }
 @media (max-width: 576px){

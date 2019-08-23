@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Spring} from 'react-spring/renderprops';
 import VisibilitySensor from "react-visibility-sensor";
 import './Intro.css';
+import Collinear from '../pts/Collinear';
 
 class Intro extends Component {
     handleOnChange = (visible) => {
