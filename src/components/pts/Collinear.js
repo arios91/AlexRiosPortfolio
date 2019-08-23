@@ -24,7 +24,7 @@ class Collinear extends PtsCanvas {
     // console.log('animate');
     for(let x=0, y=this.pairs.length; x<y; x++){
       let ln = this.pairs[x];
-      ln.rotate2D(Const.one_degree/10, this.space.center);
+      ln.rotate2D(Const.one_degree/25, this.space.center);
       // let collinear = Line.collinear(ln[0], ln[1], this.space.pointer, 0.1);
       // if(collinear){
       //   this.form.stroke("#fff").line(ln);
