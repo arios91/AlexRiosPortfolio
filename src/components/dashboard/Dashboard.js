@@ -18,14 +18,13 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div id="dash" className="text-white bg-dark">
+            <div id="dash" className="text-white">
                 <Parallax ref={ref => (this.parallax = ref)} pages={4}>
 
                     <ParallaxLayer offset={0} speed={0}>
                         <Collinear 
                             style={{height: "100%"}}
-                            background="#112232"
-                            name="pts_anim">
+                            background="#112232">
                         </Collinear>
                     </ParallaxLayer>
 
@@ -38,15 +37,15 @@ class Dashboard extends Component {
                         <Navbar/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={1} factor={1.1} speed={0.2}>
+                    <ParallaxLayer offset={1} factor={1} speed={0.15}>
                         <Projects/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={2} factor={1.1} speed={0.2}>
+                    <ParallaxLayer offset={2} factor={1} speed={0.15}>
                         <Experience/>
                     </ParallaxLayer>
 
-                    <ParallaxLayer offset={3} factor={1} speed={0}>
+                    <ParallaxLayer offset={3} factor={1} speed={0.15}>
                         <Skills/>
                     </ParallaxLayer>
                 </Parallax>
