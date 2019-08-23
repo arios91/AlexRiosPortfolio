@@ -57,8 +57,8 @@ class Experience extends Component {
                             <Trail
                                 reset
                                 items={listTwo}
-                                from={{marginLeft: -20, opacity: 0, transform: 'translate3d(0,-40px,0)'}}
-                                to={{marginLeft: 20, opacity: 1, transform: 'translate3d(0,0px,0)'}}
+                                from={{opacity: 0, transform: 'translate3d(0,-40px,0)'}}
+                                to={{opacity: 1, transform: 'translate3d(0,0px,0)'}}
                                 config={{duration: 800}}>
                                 {item => props => (
                                     <li style={props}>{item}</li>
