@@ -44,7 +44,7 @@ class Experience extends Component {
                             items={listOne}
                             from={{opacity: 0, transform: 'translate3d(80px,-40px,0px)'}}
                             to={{opacity: 1, transform: 'translate3d(0px,0px,0px)'}}
-                            config={{duration: 800}}>
+                            config={{duration: 1000}}>
                             {item => props => (
                                 <li style={props}>{item}</li>
                                 )}
@@ -59,7 +59,7 @@ class Experience extends Component {
                                 items={listTwo}
                                 from={{opacity: 0, transform: 'translate3d(80px,-40px,0px)'}}
                                 to={{opacity: 1, transform: 'translate3d(0px,0px,0px)'}}
-                                config={{duration: 800}}>
+                                config={{duration: 1000}}>
                                 {item => props => (
                                     <li style={props}>{item}</li>
                                 )}
