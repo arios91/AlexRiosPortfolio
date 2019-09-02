@@ -37,7 +37,7 @@ class Intro extends Component {
                                             <br/><br/>
                                             <span>I'm a Software Engineer based in Austin with three years of professional experience in designing, developing, testing, and maintaining Java enterprise applications.</span>
                                             <br/><br/>
-                                            <span>I like to spend my my free time playing video games or practicing front end development using Javascript frameworks such are React and Angular along with Node.js and Express.</span>
+                                            <span>I like to spend my free time playing video games or practicing front end development using Javascript frameworks such as React and Angular along with Node.js and Express.</span>
                                         </div>
                                     </div>
                                 )}
