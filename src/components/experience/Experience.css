@@ -1,12 +1,15 @@
 
 .company-name{
-    text-decoration: underline;
     cursor: pointer;
     transition: font-size 1s;
 }
 
 .company-name:hover{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+}
+
+.inactive-company{
+    text-decoration: underline;
 }
 
 .job-title{
