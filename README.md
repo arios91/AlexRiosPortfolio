@@ -1,1 +1,1 @@
-Professional portfolio, live version can be found at https://www.alex-rios.me
+Professional portfolio, live version can be found at http://www.alex-rios.me
