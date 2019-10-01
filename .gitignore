@@ -6,6 +6,7 @@
 .pnp.js
 /src/images
 /src/resume
+/.vs
 
 # testing
 /coverage
